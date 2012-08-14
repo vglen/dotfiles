@@ -14,4 +14,5 @@ alias r19='rvm use 1.9.2'
 alias ree='rvm use ree'
 alias rjr='rvm use jruby'
 
+# Bundler (Ruby)
 alias be='bundle exec'
