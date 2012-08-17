@@ -220,7 +220,7 @@ if has('gui_running')
     set guifont=Monospace\ 9
     winpos 1100 0              " put window at right edge of left monitor
     set lines=85
-    set columns=140
+    set columns=120
   endif
 
   colorscheme losh_molokai
