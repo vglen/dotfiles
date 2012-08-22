@@ -7,6 +7,9 @@ function authme {
   ssh $1 'cat >>.ssh/authorized_keys' <~/.ssh/id_rsa.pub
 }
 
+# avoid "Unable to create Ubuntu Menu Proxy" under Unity
+gvim () { (/usr/bin/gvim -f "$@" &) }
+
 mkcd() {
   [[ $1 ]] || return 0
   [[ -d $1 ]] || mkdir -p "$1"
