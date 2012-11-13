@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+begin
+  require 'redcarpet'
+rescue LoadError
+  puts "Please install the 'redcarpet' gem"
+  exit 1
+end
+
+filepath = ARGV[0]
+
+if filepath.nil? or filepath == ""
+  puts "Please specify a markdown-formatted file to convert"
+  exit 1
+end
+
+if !File.exist? filepath
+  puts "File #{filepath} not found"
+  exit 1
+end
+
+m = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true)
+puts m.render(File.read(filepath)
