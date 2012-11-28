@@ -46,7 +46,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 # prepend ~/bin to PATH
-PATH="$HOME/bin:$PATH"
+PATH="/usr/local/heroku/bin:$HOME/bin:$PATH"
 
 # jump to ~/dev subdirs
 export CDPATH=.:"$HOME/dev"
