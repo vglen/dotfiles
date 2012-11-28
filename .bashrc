@@ -2,8 +2,8 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-# execute when running interactively
-if [[ -n "$PS1" ]] ; then
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -60,9 +60,3 @@ export LD_LIBRARY_PATH=/usr/local/lib
 for f in .bash_aliases .bash_prompt .bash_functions .credentials; do
   [ -f "$HOME/$f" ] && source "$HOME/$f"
 done
-
-# end interactive-only section
-fi
-
-# Load Ruby Version Manager. This must come AFTER all PATH/variable settings.
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
