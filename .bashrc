@@ -43,6 +43,8 @@ fi
 # sources /etc/bash.bashrc).
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
   . /etc/bash_completion
+elif [ -f `brew --prefix`/etc/bash_completion ]; then
+  . `brew --prefix`/etc/bash_completion
 fi
 
 # prepend ~/bin to PATH
