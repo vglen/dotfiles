@@ -145,7 +145,7 @@ imap <S-A-l> <Space>=><Space>
 imap {<Tab> { \|\|  }<Esc>3hi
 
 " require and call debugger
-nmap <LocalLeader>id Orequire 'ruby-debug'; debugger<Esc>
+nmap <LocalLeader>id Orequire 'debugger'; debugger<Esc>
 
 " ---------------------------------------------------------------------------
 "  Split Navigation
