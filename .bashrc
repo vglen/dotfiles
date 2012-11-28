@@ -47,18 +47,21 @@ elif [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
 
-# prepend ~/bin to PATH
-PATH="/usr/local/heroku/bin:$HOME/bin:$PATH"
-
-# jump to ~/dev subdirs
-export CDPATH=.:"$HOME/dev"
-
-export EDITOR=vim
-
-# for compiling some packages
-export LD_LIBRARY_PATH=/usr/local/lib
-
 # load extra goodies
 for f in .bash_aliases .bash_prompt .bash_functions .credentials; do
   [ -f "$HOME/$f" ] && source "$HOME/$f"
 done
+
+export EDITOR=vim
+
+# jump to ~/dev subdirs
+export CDPATH=.:"$HOME/dev"
+
+# for compiling some packages
+export LD_LIBRARY_PATH=/usr/local/lib
+
+# add to PATH
+PATH="$HOME/bin:$HOME/.rbenv/bin:/usr/local/heroku/bin:$PATH"
+
+# init rbenv (enable shims and autocompletion)
+eval "$(rbenv init -)"
