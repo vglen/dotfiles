@@ -1,5 +1,11 @@
+# add new extensions for existing types
 --type-add
 html=.haml
 --type-add
 css=.sass,.scss
 
+# define new types
+--type-set
+markdown=.markdown,.md
+--type-set
+textile=.textile
