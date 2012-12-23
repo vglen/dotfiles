@@ -213,7 +213,7 @@ cmap vv <C-r>+
 if has('gui_running')
 
   if system("uname") == "Darwin\n" " on OSX
-    set guifont=Monaco
+    set guifont=Monaco:h12
     set lines=55
     set columns=94
   else                         " on Ubuntu
