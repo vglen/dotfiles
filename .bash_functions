@@ -10,6 +10,10 @@ function authme {
 # avoid "Unable to create Ubuntu Menu Proxy" under Unity
 gvim () { (/usr/bin/gvim -f "$@" &) }
 
+trash() {
+  mv "$1" ~/.Trash/
+}
+
 mkcd() {
   [[ $1 ]] || return 0
   [[ -d $1 ]] || mkdir -p "$1"
