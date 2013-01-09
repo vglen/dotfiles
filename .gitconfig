@@ -1,0 +1,21 @@
+[user]
+  email = alex@alexreisner.com
+  name = "Alex Reisner"
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+[alias]
+  st = status
+  ci = commit
+  co = checkout
+  br = branch
+  ciaa = commit -a --amend
+  unp = log --stat origin/master..HEAD
+  unm = cherry -v --abbrev=7 master
+[push]
+  default = matching
+[github]
+  user = alexreisner
+[core]
+  excludesfile = ~/.gitignore_global
