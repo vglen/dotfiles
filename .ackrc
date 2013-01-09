@@ -9,3 +9,5 @@ css=.sass,.scss
 markdown=.markdown,.md
 --type-set
 textile=.textile
+--type-set
+coffee=.coffee
